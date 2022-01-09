@@ -22,11 +22,8 @@ function addStyle() {
 		let resultFTP = text.match("ftp");
 		let resultINTERNAL = text.match("http://internal.com");
 		
-		if(resultINTERNAL != "http://internal.com") {
-			if(resultHTTP == 'http' || resultFTP == 'ftp') {
-				search[i].classList.add("external-red");
-			}
+		if(resultINTERNAL != "http://internal.com" && resultHTTP == 'http' || resultFTP == 'ftp') {
+			search[i].classList.add("external-red");
 		}
-		
 	}
 };
